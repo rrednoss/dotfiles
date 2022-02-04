@@ -1,0 +1,23 @@
+{
+    "background": "#1E1E1E",
+    "black": "#000000",
+    "blue": "#2472C8",
+    "brightBlack": "#666666",
+    "brightBlue": "#569CD6",
+    "brightCyan": "#9CDCFE",
+    "brightGreen": "#B5CEA8",
+    "brightPurple": "#DAADD6",
+    "brightRed": "#F14C4C",
+    "brightWhite": "#E5E5E5",
+    "brightYellow": "#DCDCAA",
+    "cursorColor": "#FFFFFF",
+    "cyan": "#11A8CD",
+    "foreground": "#D4D4D4",
+    "green": "#6A9955",
+    "name": "Dark Plus",
+    "purple": "#C586C0",
+    "red": "#CD3131",
+    "selectionBackground": "#FFFFFF",
+    "white": "#E5E5E5",
+    "yellow": "#CE9178"
+}
