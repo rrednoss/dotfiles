@@ -8,7 +8,9 @@ A collection of my dotfiles.
 
 **Tools**
 * [fzf](https://github.com/junegunn/fzf)
+* [jq](https://github.com/stedolan/jq)
 * [kubectx + kubens](https://github.com/ahmetb/kubectx)
+* [yq](https://github.com/mikefarah/yq)
 
 **Vim**
 * [dense-analysis/ale](https://github.com/dense-analysis/ale)
