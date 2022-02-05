@@ -84,17 +84,21 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" conf: morhetz/gruvbox
+" govim/govim
+call govim#config#Set("FormatOnSave", "goimports-gofmt")
+
+" morhetz/gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 
-" conf: dense-analysis/ale
+" dense-analysis/ale
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
 
-" conf: preservim/nerdtree
+" preservim/nerdtree
+let NERDTreeShowHidden=1
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
