@@ -51,11 +51,14 @@ alias h="helm"
 alias k="kubectl"
 alias tf="terraform"
 
-# [Helm......] add autocompletion
+# [fzf......]
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# [Helm......]
 source <(helm completion zsh)
 
-# [Local.....] add local specific settings
+# [Local.....]
 source ~/.zshrc_local
 
-# [Kubernetes] add autocompletion
+# [Kubernetes]
 source <(kubectl completion zsh)
