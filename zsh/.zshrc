@@ -9,7 +9,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rrednoss/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -43,13 +43,21 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Set personal settings regarding zsh, zsh history, etc.
+HISTSIZE=1
+history -c &> /dev/null
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias h="helm"
 alias k="kubectl"
+alias ls="LC_COLLATE=C ls -h --group-directories-first --color=auto"
+alias tg="terragrunt"
 alias tf="terraform"
+alias tfp="terraform plan -var-file=../terraform.tfvars -out=plan.out"
+alias tfa="terraform apply 'plan.out'"
 
 # [Helm......] add autocompletion
 source <(helm completion zsh)
@@ -59,3 +67,9 @@ source ~/.zshrc_local
 
 # [Kubernetes] add autocompletion
 source <(kubectl completion zsh)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

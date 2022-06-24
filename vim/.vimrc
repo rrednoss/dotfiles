@@ -1,5 +1,5 @@
 " Set dark background.
-set bg=dark
+" set bg=dark
 
 " Highlight the text line of the cursor. Useful to easily spot the cursor.
 set cursorline
@@ -25,6 +25,9 @@ set tabstop=2
 
 " If in Insert, Replace or Visual mode put a message on the last line.
 set showmode
+
+" Whether or not to draw the signcolumn.
+set signcolumn=no
 
 " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set smartcase
@@ -74,8 +77,6 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'dense-analysis/ale'
 
-  Plug 'govim/govim'
-
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
   Plug 'morhetz/gruvbox'
@@ -83,9 +84,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree'
 
 call plug#end()
-
-" govim/govim
-call govim#config#Set("FormatOnSave", "goimports-gofmt")
 
 " This section contains new settings concerning the minimal .vimrc recommendations from govim.
 set nobackup
@@ -114,12 +112,6 @@ set updatetime=500
 " balloondelay
 set balloondelay=250
 
-" Suggestion: Turn on the sign column so you can see error marks on lines
-" where there are quickfix errors. Some users who already show line number
-" might prefer to instead have the signs shown in the number column; in which
-" case set signcolumn=number
-set signcolumn=yes
-
 " Suggestion: turn on auto-indenting. If you want closing parentheses, braces
 " etc to be added, https://github.com/jiangmiao/auto-pairs. In future we might
 " include this by default in govim.
@@ -137,8 +129,8 @@ if has("patch-8.1.1904")
 endif
 
 " morhetz/gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-autocmd vimenter * ++nested colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" autocmd vimenter * ++nested colorscheme gruvbox
 
 " dense-analysis/ale
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
