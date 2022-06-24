@@ -59,13 +59,16 @@ alias tf="terraform"
 alias tfp="terraform plan -var-file=../terraform.tfvars -out=plan.out"
 alias tfa="terraform apply 'plan.out'"
 
-# [Helm......] add autocompletion
+# [fzf......]
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# [Helm......]
 source <(helm completion zsh)
 
-# [Local.....] add local specific settings
+# [Local.....]
 source ~/.zshrc_local
 
-# [Kubernetes] add autocompletion
+# [Kubernetes]
 source <(kubectl completion zsh)
 
 export NVM_DIR="$HOME/.nvm"
