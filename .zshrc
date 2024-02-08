@@ -23,7 +23,6 @@ else
   ZSH_THEME="powerlevel10k/powerlevel10k"
 fi
 
-
 # Evaluate the powerlevel10k configuration.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
