@@ -45,6 +45,8 @@ source $ZSH/oh-my-zsh.sh
 # user configuration
 #######################################
 
+alias commit="$HOME/scripts/git_commit.sh"
+
 # Disable time elapsed for executed commands.
 unset REPORTTIME
 
