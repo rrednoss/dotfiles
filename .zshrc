@@ -47,6 +47,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias commit="$HOME/scripts/git_commit.sh"
 
+alias multip="$HOME/scripts/tmux_basic.sh"
+
 # Disable time elapsed for executed commands.
 unset REPORTTIME
 
