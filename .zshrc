@@ -41,6 +41,7 @@ plugins=()
 # Evaluate oh-my-zsh configuration.
 source $ZSH/oh-my-zsh.sh
 
+
 #######################################
 # user configuration
 #######################################
