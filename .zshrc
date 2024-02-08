@@ -14,7 +14,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Evaluate the powerlevel10k general theme.
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+export p10k_theme=/opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -f $p10k_theme ]]; then
+  # uses Homebrew installation
+  source $p10k_theme
+else
+  # uses manual installation by cloning the repository
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
+
 
 # Evaluate the powerlevel10k configuration.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
