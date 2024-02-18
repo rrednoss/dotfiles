@@ -2,9 +2,6 @@
 # ZSH configuration by @rrednoss
 # 
 
-# Disable time elapsed for executed commands.
-unset REPORTTIME
-
 # Add Brew and Brew installed applications to PATH.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
